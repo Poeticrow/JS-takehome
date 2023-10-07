@@ -61,7 +61,7 @@ students.push(student5);
 
 console.log(students);
 
-const arrOf15Items = [];
+const arrOffifteenItems = [];
 arrOffifteenItems.push("shpe");
 arrOffifteenItems.push("FALL");
 arrOffifteenItems.push("yarn");
