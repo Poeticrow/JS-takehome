@@ -100,6 +100,11 @@ const ebube = {
   Age: 17,
   payments: true,
 };
+const chika = {
+  name: "Chikadibia",
+  Age: 13,
+  payments: false,
+};
 
 const gradeChecker = (person) => {
   if (person.payments && person.Age > 16 && person.name.includes("a")) {
@@ -114,3 +119,4 @@ const gradeChecker = (person) => {
 };
 
 gradeChecker(ebube);
+gradeChecker(chika);
