@@ -1,125 +1,195 @@
-// gfdhsjkl
-
-const students = [
+const blogPost = [
   {
-    name: "arun",
-    gender: "Male",
-    physics: 88,
-    maths: 87,
-    english: 78,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2021/03/black-camaru-thinking-funny-laughing.jpg",
+    post: "ENGLISH STUDENTS!!! None Of You All Can Win This Challenge - Prove Me Wrong",
   },
   {
-    name: "rajesh",
-    gender: "Male",
-    physics: 96,
-    maths: 100,
-    english: 95,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/01/davido-wizkid.jpg",
+    post: "If You're To Suggest A Cute Twins Name For Davido's New Babies - What Names Will You Drop",
   },
   {
-    name: "moorthy",
-    gender: "Male",
-    physics: 89,
-    maths: 90,
-    english: 70,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/03/Zinoleesky-1-e1685548421802.jpg",
+    post: "LET'S TALK!! If Zinoleesky Drop a Song Today, Will You Jam It Or He Remains Cancelled In Your Book?",
   },
   {
-    name: "raja",
-    gender: "Male",
-    physics: 30,
-    maths: 25,
-    english: 40,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/Love-Damini-vs-I-Told-Them.jpg",
+    post: "MUSIC LOVERS!! Which Is A Better Album - “Love,Damini” Or “I Told Them”?",
   },
   {
-    name: "usha",
-    gender: "Female",
-    physics: 67,
-    maths: 45,
-    english: 78,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/Untitled-collage-3-e1530261995213.jpg",
+    post: "LET's TALK!!! Drake Vs Ronaldo - Who Do You Think Is More Famous",
   },
   {
-    name: "priya",
-    gender: "Female",
-    physics: 56,
-    maths: 46,
-    english: 78,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/04/praying-nigeria-1-717x472_c.jpg",
+    post: "BE SINCERE!!! How Desperate Are You To Get Rich? - Can You Say Amen To This Prayer?",
   },
   {
-    name: "Sundar",
-    gender: "Male",
-    physics: 12,
-    maths: 67,
-    english: 67,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/Arm-wrestling.jpg",
+    post: "TELL US!! Between Rambo And Arnold Schwarzenegger - Who Wins This Arm Wrestling Match?",
   },
   {
-    name: "Kavitha",
-    gender: "Female",
-    physics: 78,
-    maths: 71,
-    english: 67,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/Wizkid.jpg",
+    post: "PARTY OF THE YEAR!! Money Rains As Tiwa, Kwam 1, Tony Elumelu, Oba Elegushi, Other Celebs Storm Wizkid's Mother's Grand Burial [WATCH]",
   },
   {
-    name: "Dinesh",
-    gender: "Male",
-    physics: 56,
-    maths: 45,
-    english: 67,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/83511.jpg",
+    post: "TELL US! What Is That One Thing You Need Right Now That Can Make You Very Happy?",
   },
   {
-    name: "Hema",
-    gender: "Female",
-    physics: 71,
-    maths: 90,
-    english: 23,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/angry.jpg",
+    post: "TELL US! What Calms You Down When You're Angry?",
   },
   {
-    name: "Gowri",
-    gender: "Female",
-    physics: 100,
-    maths: 100,
-    english: 100,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2023/10/100-Dollar-daily-by-Makinde-Azeez.jpg",
+    post: "Discover My 2 Amazing Scopes Of Earning $100 (₦100,000) Daily and a Total of $2,000 (2 Milion Naira) Monthly",
   },
   {
-    name: "Ram",
-    gender: "Male",
-    physics: 78,
-    maths: 55,
-    english: 47,
-  },
-  {
-    name: "Murugan",
-    gender: "Male",
-    physics: 34,
-    maths: 89,
-    english: 78,
-  },
-  {
-    name: "Jenifer",
-    gender: "Female",
-    physics: 67,
-    maths: 88,
-    english: 90,
+    imgUrl:
+      "https://www.naijaloaded.com.ng/wp-content/uploads/2020/06/man-looking-carefully-closely.jpg",
+    post: "How Good Are Your Eyes? Oya You Spot The Pussy Cat In This Photo ",
   },
 ];
-
-const studentsData = students.map((student) => {
-  student.average = (student.physics + student.maths + student.english) / 3;
-  // console.log(student.average);
-  return student;
+const blogs = document.querySelector(".blog-posts");
+blogPost.forEach((blog) => {
+  blogs.innerHTML += `
+    <div class="blog">
+            <img src="${blog.imgUrl}" alt="alt">
+        <p>${blog.post}</p>
+    </div>
+    `;
 });
 
-const excellentStudents = studentsData
-  .filter((item) => {
-    return item.average >= 100;
-  })
-  .map((item) => item.name);
+// const students = [
+//   {
+//     name: "arun",
+//     gender: "Male",
+//     physics: 88,
+//     maths: 87,
+//     english: 78,
+//   },
+//   {
+//     name: "rajesh",
+//     gender: "Male",
+//     physics: 96,
+//     maths: 100,
+//     english: 95,
+//   },
+//   {
+//     name: "moorthy",
+//     gender: "Male",
+//     physics: 89,
+//     maths: 90,
+//     english: 70,
+//   },
+//   {
+//     name: "raja",
+//     gender: "Male",
+//     physics: 30,
+//     maths: 25,
+//     english: 40,
+//   },
+//   {
+//     name: "usha",
+//     gender: "Female",
+//     physics: 67,
+//     maths: 45,
+//     english: 78,
+//   },
+//   {
+//     name: "priya",
+//     gender: "Female",
+//     physics: 56,
+//     maths: 46,
+//     english: 78,
+//   },
+//   {
+//     name: "Sundar",
+//     gender: "Male",
+//     physics: 12,
+//     maths: 67,
+//     english: 67,
+//   },
+//   {
+//     name: "Kavitha",
+//     gender: "Female",
+//     physics: 78,
+//     maths: 71,
+//     english: 67,
+//   },
+//   {
+//     name: "Dinesh",
+//     gender: "Male",
+//     physics: 56,
+//     maths: 45,
+//     english: 67,
+//   },
+//   {
+//     name: "Hema",
+//     gender: "Female",
+//     physics: 71,
+//     maths: 90,
+//     english: 23,
+//   },
+//   {
+//     name: "Gowri",
+//     gender: "Female",
+//     physics: 100,
+//     maths: 100,
+//     english: 100,
+//   },
+//   {
+//     name: "Ram",
+//     gender: "Male",
+//     physics: 78,
+//     maths: 55,
+//     english: 47,
+//   },
+//   {
+//     name: "Murugan",
+//     gender: "Male",
+//     physics: 34,
+//     maths: 89,
+//     english: 78,
+//   },
+//   {
+//     name: "Jenifer",
+//     gender: "Female",
+//     physics: 67,
+//     maths: 88,
+//     english: 90,
+//   },
+// ];
 
-const maleStudents = studentsData.filter((item) => item.gender === "Male");
-const femaleStudents = studentsData.filter((item) => item.gender === "Female");
+// const studentsData = students.map((student) => {
+//   student.average = (student.physics + student.maths + student.english) / 3;
+//   // console.log(student.average);
+//   return student;
+// });
 
-console.log(studentsData);
-console.log(excellentStudents);
-console.log(maleStudents);
-console.log(femaleStudents);
+// const excellentStudents = studentsData
+//   .filter((item) => {
+//     return item.average >= 100;
+//   })
+//   .map((item) => item.name);
+
+// const maleStudents = studentsData.filter((item) => item.gender === "Male");
+// const femaleStudents = studentsData.filter((item) => item.gender === "Female");
+
+// console.log(studentsData);
+// console.log(excellentStudents);
+// console.log(maleStudents);
+// console.log(femaleStudents);
 
 // // Create an array to store JAMB student objects
 // const students = [];
