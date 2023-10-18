@@ -63,6 +63,7 @@ const blogPost = [
 const mybody = document.querySelector("body");
 const button = document.querySelector(".btn");
 const blogs = document.querySelector(".blog-posts");
+const cards = document.querySelector(".cards");
 
 const toggleDarkMode = () => {
   mybody.classList.toggle("dark");
@@ -79,6 +80,57 @@ blogPost.forEach((blog) => {
     `;
 });
 
+const button2 = document.getElementById("bbtn");
+
+const handleForm = (e) => {
+  // console.log(e);
+  e.preventDefault();
+  const email = document.getElementById("i1").value;
+  const password = document.getElementById("i2").value;
+
+  const errorOne = document.getElementById("error1");
+  const errortwo = document.getElementById("error2");
+
+  if (!email) {
+    errorOne.textContent = "Please enter an email";
+  }
+
+  if (!password) {
+    errortwo.textContent = "Input Password";
+  }
+  console.log({ email, password });
+};
+button2.addEventListener("click", handleForm);
+
+const fetchUrlAndDisplay = async () => {
+  try {
+    const ships = await fetch("https://swapi.dev/api/starships/")
+      .then((res) => res.json())
+      .then((data) => data.results);
+    console.log(ships);
+    ships.forEach((ship) => {
+      cards.innerHTML += `<div class="card">
+      <h2>${ship.name}</h2>
+      <div class="info">
+        <span>Model : ${ship.model}</span>
+        <span>price : $${ship.cost_in_credits}</span>
+        <span>passengers : ${ship.passengers} people</span>
+        <span>crew : ${ship.crew} personnel</span>
+        <span>capacity : ${ship.cargo_capacity} load</span>
+        <span>Top speed : ${ship.max_atmosphering_speed} km/s</span>
+        <span>Classification : ${ship.starship_class}</span>
+      </div>
+    </div>`;
+    });
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+fetchUrlAndDisplay();
+
+// fetch("https://jsonplaceholder.typicode.com/comments")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 // const students = [
 //   {
 //     name: "arun",
