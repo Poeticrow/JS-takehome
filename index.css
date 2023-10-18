@@ -8,6 +8,7 @@
   font-family: monospace;
   font-weight: normal;
 }
+
 .container {
   border: 1px solid red;
   max-width: 80%;
@@ -55,6 +56,15 @@ img {
 }
 .blog p {
   margin-top: 1em;
+}
+
+.dark {
+  background-color: rgb(45, 40, 40);
+  color: white;
+}
+
+.dark > .container {
+  background-color: rgb(45, 40, 40);
 }
 @media screen and (max-width: 800px) {
   .blog-posts {

@@ -60,7 +60,16 @@ const blogPost = [
     post: "How Good Are Your Eyes? Oya You Spot The Pussy Cat In This Photo ",
   },
 ];
+const mybody = document.querySelector("body");
+const button = document.querySelector(".btn");
 const blogs = document.querySelector(".blog-posts");
+
+const toggleDarkMode = () => {
+  mybody.classList.toggle("dark");
+};
+
+button.addEventListener("click", toggleDarkMode);
+
 blogPost.forEach((blog) => {
   blogs.innerHTML += `
     <div class="blog">
